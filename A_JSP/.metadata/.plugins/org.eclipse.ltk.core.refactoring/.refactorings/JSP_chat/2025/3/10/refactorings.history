@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;JSP_chat/src/main/webapp/chatWindow.jsp&apos; to &apos;ChatWindow.jsp&apos;" description="Rename resource &apos;chatWindow.jsp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/webapp/chatWindow.jsp" name="ChatWindow.jsp" stamp="1741326037808" updateReferences="true"/>
+</session>

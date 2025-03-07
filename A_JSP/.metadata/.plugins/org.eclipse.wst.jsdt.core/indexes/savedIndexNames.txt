@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+C:\조은빈\toy_chat\A_JSP\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1165797492.index
+3550062156.index
+1461954077.index
+1386635609.index
+706475672.index
+2195539473.index
