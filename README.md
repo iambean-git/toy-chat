@@ -4,8 +4,12 @@
 - JSP로 구현
 - 서버 : apache-tomcat10.1
 - 스타일링 없이 아주 기본적인 기능만 구현
+    ### ✅ 연습한 것 / 배운것
+    -
 
 ## B_ReactNSpringBoot
-- React와 SpringBoot로 구현
-### React
-- Vite, TypeScript, TailwindCSS
+- FE : React, Vite, TypeScript, TailwindCSS
+- BE : SpringBoot
+    ### ✅ 연습한 것 / 배운것
+    - 반응형 웹 구현 (NavBar 및 레이아웃 구성)
+    - `clsx`를 사용한 조건부 class 부여
