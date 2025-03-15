@@ -1,8 +1,10 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { IoClose, IoMenu, IoChevronForward, IoHomeOutline, IoTrailSignOutline } from "react-icons/io5";
 import { FaRegBell } from "react-icons/fa";
 export default function Navbar() {
+  const location = useLocation();
+  const currentPath = location.pathname;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
@@ -32,17 +34,25 @@ export default function Navbar() {
     <>
       {/* 데스크탑 사이드바 */}
       <div className="hidden md:flex flex-col w-80 h-screen  bg-gray-100 ">
-        <div className="flex justify-start items-center pt-7 px-7 mb-2 text-lg relative">
-          <span>홍길동님</span>
-          <span className="ml-3 text-lg"> <FaRegBell /> </span>
-          <button className="absolute right-7 text-sm border p-2 rounded-lg border-gray-400 text-gray-500">로그아웃</button>
+        {/* <div className="h-20 flex justify-between items-center px-7 text-lg  bg-[#2e6eea] text-white">
+            <span>홍길동님</span>
+            <span className="ml-15 text-2xl relative"> 
+              <FaRegBell  /> 
+              <div className="size-1.5 rounded-full bg-red-400 absolute -top-1 -right-1.5"></div>
+            </span>
+        </div> */}
+
+        <div className="h-20 flex justify-end items-center px-7 text-lg  bg-[#2e6eea] text-white">
+            <button className="border rounded-lg py-2 px-4 text-sm">로그인</button>
         </div>
+
         <nav className="flex-1 p-4 text-xl text-gray-500">
           <ul>
             {menuList.map((i) =>
-              <li>
-                <Link to={i.link} className="flex justify-start items-center relative mt-2 p-3
-                                              rounded-lg bg-white hover:bg-[#e4f0ff] hover:text-[#2e6eea]">
+              <li key={i.name}>
+                <Link to={i.link} className={`flex justify-start items-center relative mt-2 p-3
+                                              rounded-lg  hover:bg-[#e4f0ff] hover:text-[#2e6eea]
+                                              ${currentPath === i.link ? "bg-[#e4f0ff] text-[#2e6eea]" : "bg-white"}`}>
                   {i.icon}
                   <span className="ml-3">{i.name}</span>
                   <IoChevronForward className="absolute right-3" />
