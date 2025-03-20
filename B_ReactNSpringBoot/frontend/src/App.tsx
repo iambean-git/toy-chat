@@ -7,22 +7,26 @@ import Page2 from "./pages/Page2";
 import Chat from "./pages/Chat";
 
 import Login from "./pages/Login";
+
+import Test from "./pages/Test";
 function App() {
 
   return (
     <>
-      <Router>
-        <Routes>
-          <Route element={<LayoutWithNavbar />}>
-            <Route path="/" element={<Home />} />
-            <Route path="/page1" element={<Page1 />} />
-            <Route path="/page2" element={<Page2 />} />
-            <Route path="/chat" element={<Chat />} />
-          </Route>
+        <Router>
+          <Routes>
+            <Route element={<LayoutWithNavbar />}>
+              <Route path="/" element={<Home />} />
+              <Route path="/page1" element={<Page1 />} />
+              <Route path="/page2" element={<Page2 />} />
+              <Route path="/chat" element={<Chat />} />
+              
+              <Route path="/test" element={<Test />} />
+            </Route>
 
-          <Route path="/login" element={<Login />} />
-        </Routes>
-      </Router>
+            <Route path="/login" element={<Login />} />
+          </Routes>
+        </Router>
     </>
   )
 }
